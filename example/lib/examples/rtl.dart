@@ -56,8 +56,7 @@ class _RtlExamplePageState extends State<RtlExamplePage> {
   Widget _skeletonView() => SkeletonListView(
         item: SkeletonListTile(
           verticalSpacing: 12,
-          leadingStyle: SkeletonAvatarStyle(
-              width: 64, height: 64, shape: BoxShape.circle),
+          leadingStyle: SkeletonAvatarStyle(width: 64, height: 64, shape: BoxShape.circle),
           titleStyle: SkeletonLineStyle(
               height: 16,
               minLength: MediaQuery.of(context).size.width / 2,
@@ -83,8 +82,7 @@ class _RtlExamplePageState extends State<RtlExamplePage> {
                 width: 64,
                 height: 64,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/placeholder.png")),
+                  image: DecorationImage(image: AssetImage("assets/placeholder.png")),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -99,7 +97,7 @@ class _RtlExamplePageState extends State<RtlExamplePage> {
                     randomText(),
                     style: Theme.of(context)
                         .textTheme
-                        .headline6!
+                        .headlineSmall!
                         .copyWith(fontSize: 16, fontWeight: FontWeight.w600),
                     maxLines: 1,
                   ),

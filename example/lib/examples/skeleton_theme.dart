@@ -3,8 +3,7 @@ import 'package:skeletons/skeletons.dart';
 
 class SkeletonThemeExamplePage extends StatefulWidget {
   @override
-  _SkeletonThemeExamplePageState createState() =>
-      _SkeletonThemeExamplePageState();
+  _SkeletonThemeExamplePageState createState() => _SkeletonThemeExamplePageState();
 }
 
 class _SkeletonThemeExamplePageState extends State<SkeletonThemeExamplePage> {
@@ -45,8 +44,7 @@ class _SkeletonThemeExamplePageState extends State<SkeletonThemeExamplePage> {
             contentSpacing: 24,
             padding: EdgeInsets.symmetric(vertical: 16),
             leadingStyle: SkeletonAvatarStyle(width: 32, height: 24),
-            titleStyle:
-                SkeletonLineStyle(borderRadius: BorderRadius.circular(4)),
+            titleStyle: SkeletonLineStyle(borderRadius: BorderRadius.circular(4)),
             hasSubtitle: false,
           )),
           child: _contentView(),
@@ -78,7 +76,7 @@ class _SkeletonThemeExamplePageState extends State<SkeletonThemeExamplePage> {
               Expanded(
                 child: Text(
                   "Lorem ipsum dolor sit amet.",
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headlineSmall,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),

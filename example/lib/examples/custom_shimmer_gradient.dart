@@ -5,12 +5,10 @@ import 'package:skeletons/skeletons.dart';
 
 class CustomShimmerGradientExamplePage extends StatefulWidget {
   @override
-  _CustomShimmerGradientExamplePageState createState() =>
-      _CustomShimmerGradientExamplePageState();
+  _CustomShimmerGradientExamplePageState createState() => _CustomShimmerGradientExamplePageState();
 }
 
-class _CustomShimmerGradientExamplePageState
-    extends State<CustomShimmerGradientExamplePage> {
+class _CustomShimmerGradientExamplePageState extends State<CustomShimmerGradientExamplePage> {
   bool _isLoading = true;
 
   final random = new Random();
@@ -72,8 +70,7 @@ class _CustomShimmerGradientExamplePageState
   Widget _skeletonView() => SkeletonListView(
         item: SkeletonListTile(
           verticalSpacing: 12,
-          leadingStyle: SkeletonAvatarStyle(
-              width: 64, height: 64, shape: BoxShape.circle),
+          leadingStyle: SkeletonAvatarStyle(width: 64, height: 64, shape: BoxShape.circle),
           titleStyle: SkeletonLineStyle(
               height: 16,
               minLength: 200,
@@ -99,8 +96,7 @@ class _CustomShimmerGradientExamplePageState
                 width: 64,
                 height: 64,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/placeholder.png")),
+                  image: DecorationImage(image: AssetImage("assets/placeholder.png")),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -113,10 +109,7 @@ class _CustomShimmerGradientExamplePageState
                 children: [
                   Text(
                     randomText(),
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6!
-                        .copyWith(fontSize: 16),
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontSize: 16),
                     maxLines: 1,
                   ),
                   SizedBox(

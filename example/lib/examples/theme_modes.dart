@@ -18,8 +18,7 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
 
   void _toggleThemeMode() {
     setState(() {
-      _themeMode =
-          _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+      _themeMode = _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
     });
   }
 
@@ -79,8 +78,7 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
               skeleton: _skeletonView(),
               child: _contentView(),
             ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerDocked,
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
             floatingActionButton: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -89,17 +87,14 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
                   FloatingActionButton(
                     heroTag: "THEME_MODE_ACTION_BUTTON",
                     onPressed: _toggleThemeMode,
-                    child: Icon(_themeMode == ThemeMode.light
-                        ? Icons.wb_sunny
-                        : Icons.nightlight_round),
+                    child: Icon(
+                        _themeMode == ThemeMode.light ? Icons.wb_sunny : Icons.nightlight_round),
                   ),
                   FloatingActionButton(
                     heroTag: "LOADING_ACTION_BUTTON",
                     onPressed: _toggleLoading,
                     child: Icon(
-                      _isLoading
-                          ? Icons.hourglass_full
-                          : Icons.hourglass_bottom,
+                      _isLoading ? Icons.hourglass_full : Icons.hourglass_bottom,
                     ),
                   )
                 ],
@@ -115,8 +110,8 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
         contentSpacing: 12,
         verticalSpacing: 12,
         padding: EdgeInsets.symmetric(vertical: 12),
-        leadingStyle: SkeletonAvatarStyle(
-            width: 64, height: 64, borderRadius: BorderRadius.circular(8)),
+        leadingStyle:
+            SkeletonAvatarStyle(width: 64, height: 64, borderRadius: BorderRadius.circular(8)),
         titleStyle: SkeletonLineStyle(borderRadius: BorderRadius.circular(4)),
         subtitleStyle: SkeletonLineStyle(
             borderRadius: BorderRadius.circular(4),
@@ -137,8 +132,7 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
                 height: 64,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(
-                      image: AssetImage("assets/placeholder.png")),
+                  image: DecorationImage(image: AssetImage("assets/placeholder.png")),
                 ),
               ),
               SizedBox(
@@ -150,7 +144,7 @@ class _ThemeModesExamplePageState extends State<ThemeModesExamplePage> {
                 children: [
                   Text(
                     "Lorem ipsum dolor sit amet.",
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.headlineSmall,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
